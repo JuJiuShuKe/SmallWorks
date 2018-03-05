@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+section{
+    font-size: 0;
+    height: 420px;
+    width: 950px;
+    overflow: hidden;
+    position: absolute;
+}
+section a{
+    display: inline-block;
+    /*position: absolute;*/
+    transition: all 2s;
+    /*overflow: hidden;*/
+    width: 190px;
+}
+section img{
+     width: 750px;
+    height: 420px;
+    transition: all 2s;
+}

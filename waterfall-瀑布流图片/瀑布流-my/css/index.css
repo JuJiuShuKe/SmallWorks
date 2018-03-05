@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgba(195, 210, 210, 0.27);
+}
+section{
+    width: 100%;
+    margin: auto;
+    font-size: 0;
+}
+div{
+    display: inline-block;
+    float: left;
+}
+div img{
+    width: 90%;
+    margin: 5%;
+}

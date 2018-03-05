@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+section{
+    width: 660px;
+    margin:50px auto 0;
+    position: relative;
+    border: 1px solid #000;
+}
+section > .left{
+    float: left;
+}
+section > .left div{
+    padding: 16.5px  30px;
+    cursor: pointer;
+}
+.aside{
+    background-color: rgb(194, 194, 194) !important;
+}
+section > .left div:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+section > .right{
+    font-size: 0;
+}
+img{
+    width: 552px;
+    height: 215px;
+}
+section > .right p{
+    padding: 5px 10px;
+    height:25px;
+    background-color: rgba(0, 0, 0, 0.59);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 80.5%;
+    text-align: right;
+}
+section > .right span{
+    background-color: rgb(255, 255, 255);
+    font-size: 18px;
+    padding: 4px 10px;
+    border: 2px inset #ffffff;
+    margin:0 10px;
+    cursor: pointer;
+}

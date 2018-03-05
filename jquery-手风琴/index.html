@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <link rel="stylesheet" href="reset.css">
+        <script src="jquery-3.2.1.min.js"></script>
+    </head>
+    <body>
+        <ul>
+            <li>
+                <span></span>
+                <div><img width="250px" height="400px" style="background-color: #00ff1f"></div>
+            </li>
+            <li>
+                <span></span>
+                <div><img width="250px" height="400px" style="background-color: #fffc00"></div>
+            </li>
+            <li>
+                <span></span>
+                <div><img width="250px" height="400px" style="background-color: #ff0300"></div>
+            </li>
+            <li>
+                <span></span>
+                <div><img width="250px" height="400px" style="background-color: #0400ff"></div>
+            </li>
+        </ul>
+    </body>
+    <script>
+//        var zaq = 0;
+//        $('span').click(function(){
+//            if(zaq==$(this).parent().index()){
+//                $(this).parent().find('div').slideToggle(600)
+//            }else {
+//                $('div').slideUp(600);
+//                $(this).parent().find('div').slideToggle(600);
+//            }
+//            zaq=$(this).parent().index()
+//        });
+        $('span').click(function() {
+            $(this).parent().find('div').slideToggle(600).siblings().parent().siblings('li').find('div').slideUp(600);
+        });
+
+
+    </script>
+</html>

@@ -1,0 +1,118 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+*{
+    -moz-user-select:none;
+    -webkit-user-select:none;
+    user-select:none;
+}
+article{
+    width: 1024px;
+    margin: 50px auto;
+}
+input[type="checkbox"]{
+    width: 15px;
+    height: 15px;
+}
+.box > div >.shopHeader , .box .shops >div{
+    padding: 10px;
+}
+.content .shopName a{
+    color: #3c3c3c;
+    font-size: 12px;
+    letter-spacing :1px;
+    text-decoration: none;
+}
+.content .shopName a:hover{
+    color: #FF4400;
+    text-decoration: underline;
+}
+.content .shopDetails ul:after{
+    display: block;
+    content: '.';
+    clear: both;
+    line-height: 0;
+    visibility: hidden;
+}
+.amount_money {
+    font-size: 17px;
+    font-weight: bold;
+    color: #FF4400;
+}
+.content .shopDetails {
+    border: 1px solid #CCCCCC;
+    margin-top: -1px;
+}
+.content .shopDetails li{
+    float: left;
+    width: 12%;
+}
+.content .shopDetails li:first-child>input{
+    margin-left: 20px;
+}
+.content .shopDetails li:nth-child(3){
+    width: 16%;
+}
+.content .shopDetails li:nth-child(3)>span{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;
+    font-size: 13px;
+    padding-right: 5px;
+}
+.content .shopDetails li img{
+    width: 80px;
+    height: 80px;
+}
+.content .shopHeader ul:after{
+    display: block;
+    content: '.';
+    clear: both;
+    line-height: 0;
+    visibility: hidden;
+}
+.content .shopHeader li{
+    float: left;
+    width: 12%;
+}
+.content .shopHeader li:nth-child(1){
+    width: 24%;
+}
+.content .shopHeader li:nth-child(2){
+    width: 16%;
+}
+.gw_num{border: 1px solid #dbdbdb;width: 110px;line-height: 26px;overflow: hidden;}
+.gw_num em{display: block;height: 26px;width: 26px;float: left;color: #7A7979;border-right: 1px solid #dbdbdb;text-align: center;cursor: pointer;}
+.gw_num .num{display: block;float: left;text-align: center;width: 52px;font-style: normal;font-size: 14px;line-height: 24px;border: 0;}
+.gw_num em.add{float: right;border-right: 0;border-left: 1px solid #dbdbdb;}
+
+.bottom {
+    font-size: 0;
+    background-color: #E5E5E5;
+    border-bottom: 1px solid #cccccc;
+}
+.bottom i{
+    font-size: 17px;
+    font-weight: bold;
+    color: #FF4400;
+}
+.bottom .del:hover{
+    text-decoration: underline;
+    color: #FF4400;
+}
+.bottom > a{
+    color: #3c3c3c;
+    font-size: 16px;
+    width: 16%;
+    display: inline-block;
+    padding: 10px  2%;
+    text-align: center;
+}
+.bottom > a:last-child{
+    color: #ffffff;
+    background-color: #B0B0B0;
+}

@@ -1,0 +1,607 @@
+.swiper-container,body,html {
+    overflow: hidden;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@font-face {
+    font-family:SketchRockwell;src:url(../fonts/xc7we2.ttf);
+}
+
+@font-face {
+    font-family:SketchRoc;src:url(../fonts/b77h0q.ttf);
+}
+
+@font-face {
+    font-family:SkeRoc1;src:url(../fonts/bwovk4.ttf);
+}
+
+@font-face {
+    font-family:SkeRoc2;src:url(../fonts/fitwd3.ttf);
+}
+
+@font-face {
+    font-family:SkeRoc3;src:url(../fonts/ednm75.ttf);
+}
+
+@font-face {
+    font-family:SkeRoc4;src:url(../fonts/usb23r.ttf);
+}
+
+@font-face {
+    font-family:SkeRoc5;src:url(../fonts/vk46z1.ttf);
+}
+
+@font-face {
+    font-family:SkeThree;src:url(../fonts/ylj4a.ttf);
+}
+
+@font-face {
+    font-family:SkeThreeZW;src:url(../fonts/gkbq9b.ttf);
+}
+
+.swiper-slide {
+    overflow: hidden;
+    width: 100%;
+}
+
+.swiper-button-next {
+    top: inherit;
+    bottom: 0;
+    left: 50%;
+    z-index: 100;
+    margin-left: -22px;
+    width: 44px;
+    background: url(../img/nextPage.png) no-repeat;
+    background-size: 100%;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+}
+
+#musi {
+    position: absolute;
+    top: 2.25%;
+    right: 4%;
+    z-index: 1000;
+    width: 9%;
+}
+
+.swiper-slide img,.swiper-slide span {
+    position: absolute;
+}
+
+.slide1 .img1 {
+    left: -89%;
+    width: 320%;
+}
+
+.slide1 .img2 {
+    top: 10%;
+    right: 2%;
+    width: 32%;
+}
+
+.slide1 .img3 {
+    top: 5%;
+    left: 21%;
+    width: 60%;
+    border-radius: 50%;
+    box-shadow: #000 0 0 26px;
+}
+
+.slide1 .span1 {
+    top: 42%;
+    width: 100%;
+    color: #e7be1c;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    font-family: SketchRoc;
+    line-height: 1.2;
+}
+
+.slide1 .span2 {
+    top: 46%;
+    width: 100%;
+    color: #e7be1c;
+    text-align: center;
+    letter-spacing: -1px;
+    font-weight: 700;
+    font-size: 14px;
+    font-family: SketchRockwell;
+    line-height: 1.2;
+}
+
+.slide1 .img4 {
+    bottom: 33%;
+    left: -12%;
+    width: 67%;
+}
+
+.slide1 .img5 {
+    right: -12%;
+    bottom: 33%;
+    width: 67%;
+}
+
+.slide1 .img6 {
+    bottom: 0;
+    left: -15%;
+    width: 130%;
+}
+
+.slide1 .img7 {
+    bottom: 0;
+    left: -26%;
+    width: 109%;
+}
+
+.slide1 .img8 {
+    right: -28%;
+    bottom: 0;
+    width: 115%;
+}
+
+.slide1 .img9 {
+    bottom: 4%;
+    left: 17%;
+    width: 67%;
+}
+
+.slide2 {
+    background-color: #fff;
+}
+
+.slide2 .img1,.slide3 .img1 {
+    width: 100%;
+    height: 100%;
+}
+
+.slide2 .img2 {
+    top: 1.5%;
+    right: -10%;
+    height: 86%;
+}
+
+.slide2 .img3 {
+    right: -23%;
+    bottom: -4%;
+    height: 26%;
+}
+
+.slide2 .img4 {
+    top: 12%;
+    left: 10%;
+    width: 70%;
+    height: 50%;
+    opacity: .9;
+}
+
+.slide2 span {
+    top: 10%;
+    width: 1em;
+    font-weight: 700;
+    font-size: 1.4em;
+    line-height: 1.5;
+}
+
+.slide2 .span1 {
+    top: 20%;
+    left: 10%;
+    z-index: 2;
+    font-size: 2.5em;
+    font-family: SkeRoc1;
+}
+
+.slide2 .span1>i {
+    position: absolute;
+    top: 68%;
+    left: -23%;
+    z-index: -1;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    background-color: #ff0200;
+    opacity: .7;
+}
+
+.slide2 .span2 {
+    left: 30%;
+    font-family: SkeRoc2;
+}
+
+.slide2 .span3 {
+    left: 40%;
+    font-family: SkeRoc3;
+}
+
+.slide2 .span4 {
+    left: 50%;
+    font-family: SkeRoc4;
+}
+
+.slide2 .span5 {
+    left: 60%;
+    font-family: SkeRoc5;
+}
+
+.slide2 .img5 {
+    top: 66%;
+    left: 51%;
+    width: 35%;
+}
+
+.slide2 .img6 {
+    bottom: 0;
+    left: -17%;
+    width: 106%;
+}
+
+.slide3 .img2 {
+    top: 5%;
+    width: 100%;
+}
+
+.slide3 .img3 {
+    bottom: 5%;
+    width: 100%;
+}
+
+.slide3 .img4 {
+    top: 8%;
+    left: 8%;
+    width: 85%;
+}
+
+.slide3 .img5 {
+    bottom: 0;
+    width: 155%;
+}
+
+.slide3>.div1 {
+    position: relative;
+    top: 20%;
+    width: 100%;
+    height: 13%;
+    background: url(../img/threexbg.png) no-repeat 50%;
+    background-size: 70% 100%;
+    text-align: center;
+}
+
+.slide3 .span1 {
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+    font-size: 43px;
+    font-family: SkeThree;
+    line-height: 1.9;
+}
+
+.slide3 .Mspan {
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: SkeThreeZW;
+}
+
+.slide3 .span2 {
+    top: 66%;
+}
+
+.slide3 .span3 {
+    top: 71%;
+}
+
+.slide3 .span4 {
+    top: 76%;
+}
+
+.slide3>.div2 {
+    position: relative;
+    top: 20%;
+    width: 100%;
+    height: 27.1%;
+    text-align: center;
+}
+
+.slide3 .img7 {
+    position: initial;
+    width: 62%;
+    height: 100%;
+}
+
+.slide3 .img8 {
+    top: 23%;
+    left: 24.5%;
+    width: 51%;
+    height: 60.4%;
+    border-radius: 5px;
+}
+
+.slide4 {
+    background-color: #000;
+}
+
+.slide4 .img1 {
+    top: -25%;
+    left: -12%;
+    width: 312%;
+    height: 100%;
+}
+
+.slide4 .img2 {
+    bottom: 4%;
+    width: 100%;
+}
+
+.slide4 .img2_3 {
+    top: 5%;
+    left: 7%;
+    width: 85%;
+    height: 83%;
+}
+
+.slide4 .img3 {
+    top: 5%;
+    left: 7%;
+    width: 85%;
+    height: 83%;
+    background-color: rgba(0,0,0,.26);
+    box-shadow: #000 0 0 46px;
+}
+
+.slide4 .img4 {
+    bottom: 4%;
+    left: -11%;
+    width: 115%;
+}
+
+.slide4 .img5 {
+    top: 9.5%;
+    left: 13%;
+    width: 27%;
+}
+
+.slide4 span {
+    top: 30%;
+    left: 20%;
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: cursive;
+}
+
+.slide4 .span1 {
+    top: 12%;
+    left: 44%;
+    font-size: 38px;
+}
+
+.slide4 .span2 {
+    top: 18%;
+    left: 30%;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+.slide4 .span3 {
+    top: 23%;
+    left: 43%;
+    width: 42%;
+    height: 1%;
+    border-radius: 44%;
+    background-color: rgba(255,255,255,.88);
+}
+
+.slide4 .span4 {
+    top: 35%;
+}
+
+.slide4 .span5 {
+    top: 40%;
+}
+
+.slide4 .span6 {
+    top: 45%;
+}
+
+.slide4 .span7 {
+    top: 50%;
+}
+
+.slide4 .span8 {
+    top: 55%;
+}
+
+.slide4 .span9 {
+    top: 30%;
+}
+
+.slide5 .img1 {
+    width: 170%;
+    height: 100%;
+}
+
+.slide5 div {
+    position: relative;
+    margin: auto;
+}
+
+.slide5 .div1 {
+    top: 3%;
+    width: 86%;
+    height: 43.5%;
+    background: url(../img/fivedwk.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.slide5 .div2 {
+    top: 16%;
+    width: 63%;
+    height: 70%;
+}
+
+.slide5 .img2 {
+    top: -6%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.slide5 .img3 {
+    top: -20%;
+    left: -14%;
+    width: 129%;
+    height: 128%;
+    border-radius: 50%;
+}
+
+.slide5 .img4 {
+    bottom: 0;
+    width: 100%;
+    height: 80%;
+}
+
+.slide5 .img5 {
+    right: 0;
+    bottom: 38%;
+    width: 60%;
+}
+
+.slide5 .img7 {
+    bottom: 23%;
+    width: 60%;
+}
+
+.slide5 .img6 {
+    right: 0;
+    bottom: 10%;
+    width: 60%;
+}
+
+.slide5 .img8 {
+    bottom: 0;
+    width: 60%;
+}
+
+.slide5 .img9 {
+    bottom: -10%;
+    left: -7%;
+    width: 60%;
+}
+
+.slide5 .img10 {
+    right: -11%;
+    bottom: 28%;
+    width: 60%;
+}
+
+.slide5 .img11 {
+    right: -10%;
+    bottom: 0;
+    width: 60%;
+}
+
+.slide5 .img12 {
+    bottom: 14%;
+    left: -6%;
+    width: 60%;
+}
+
+@media screen and (max-height:650px) {
+    .slide1 .pg_2 img {
+        top: 3%;
+        left: 25%;
+        width: 51%;
+    }
+
+    .slide1 .img2 {
+        top: 4%;
+        right: 5%;
+    }
+
+    .slide1 .img9 {
+        bottom: 1%;
+    }
+
+    .slide1 .span1 {
+        top: 39%;
+    }
+
+    .slide1 .span2 {
+        top: 44%;
+    }
+
+    .slide2 .span1 {
+        font-size: 2em;
+    }
+
+    .slide2 span {
+        font-size: 1em;
+    }
+
+    .slide2 .img5 {
+        top: 66%;
+        left: 60%;
+        width: 28%;
+    }
+
+    .slide3 .img2 {
+        top: 0;
+    }
+
+    .slide3 .img3 {
+        bottom: 0;
+    }
+
+    .slide3 .img4 {
+        top: 3%;
+        left: 9%;
+        width: 82%;
+    }
+
+    .slide3 .img5 {
+        bottom: -7%;
+        width: 145%;
+    }
+
+    .slide3 .span1 {
+        font-size: 32px;
+        line-height: 1.8;
+    }
+
+    .slide3 .img7 {
+        top: 29%;
+    }
+
+    .slide3 .Mspan {
+        font-size: 15px;
+    }
+
+    .slide4 .span1 {
+        top: 11%;
+        font-size: 30px;
+    }
+
+    .slide4 .span3 {
+        top: 25%;
+    }
+
+    .slide4 .img2,.slide4 .img4 {
+        bottom: 0;
+    }
+
+    .slide5 .div2 {
+        width: 54%;
+    }
+    .slide5 .div1 {
+        background-size: 85% 100%;
+        background-position-x: 20px;
+    }
+}

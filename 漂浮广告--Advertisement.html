@@ -1,0 +1,81 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            position: fixed;
+            cursor: crosshair;
+        }
+        div{
+            height: 3000px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=167167517,1579439673&fm=27&gp=0.jpg" alt="风景">
+</body>
+<script>
+    var imgDom = document.getElementsByTagName('img')[0];
+    var leftNum = 0;
+    var topNum = 0;
+    var bodyWidth = document.documentElement.clientWidth - 180;
+    var bodyHeight = document.documentElement.clientHeight - 180;
+    var vx = 1 ;
+    var vy = 1 ;
+
+    var T= setInterval(seti,5);
+
+    function seti(){
+        imgDom.style.left = leftNum + 'px';
+        imgDom.style.top = topNum + 'px';
+
+        if(leftNum >= bodyWidth){
+            leftNum = bodyWidth ;
+            vx = -1 * Math.abs(vx);
+        }
+
+        if(topNum >= bodyHeight){
+            topNum = bodyHeight ;
+            vy = -1 * Math.abs(vy) ;
+        }
+        if(leftNum<=0){
+            leftNum = 0 ;
+            vx = Math.abs(vx);
+        }
+
+        if(topNum<=0){
+            topNum = 0;
+            vy = Math.abs(vy) ;
+        }
+
+        leftNum += vx  ;
+        topNum += vy ;
+        console.log(1)
+    }
+
+
+    window.onresize = function() {
+        bodyWidth = document.documentElement.clientWidth - 180;
+        bodyHeight = document.documentElement.clientHeight - 180;
+    };
+
+    imgDom.addEventListener('click',function(){
+        this.parentNode.removeChild(this);
+        clearInterval(T);
+    });
+    imgDom.addEventListener('mouseover',function(){
+        clearInterval(T);
+    });
+    imgDom.addEventListener('mouseout',function(){
+        T= setInterval(seti,5);
+    });
+</script>
+</html>

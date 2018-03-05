@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Information</title>
+	<script type="text/javascript" src="vue.js"></script>
+	<script src="laydate/laydate.js"></script>
+	<style>		
+		.c_red{color: red;font-size: 12px}
+		.c_blue{color: blue;font-size: 12px}
+		#formBox{width: 450px;margin: 30px auto;}
+		.btn{
+			background-color: #dedede;
+			width: 100%;
+		    display: block;
+		    text-align: center;
+		    color: #000000;
+		    padding: 5px 0;
+		    text-decoration: none;
+		    border: 1px solid #4a4a4a;
+		}
+		.reset{color: #000;border: 1px solid #000;text-decoration: underline;font-size: 12px;padding: 5px 10px}
+	</style>
+</head>
+<body>
+	<form id="formBox">
+		<p>姓名：<input type="text" v-model="arr.name"> <span v-if="!arr.name" v-bind:class="c_red">输入不能为空</span> </p>
+		<p>性别：
+			<input v-model="arr.maw" type="radio" id="man" value="男" name="naw"><label for="man">男</label>
+			<input  v-model="arr.maw" type="radio" id="girl" value="女" name="naw"><label for="girl">女</label>
+		</p>
+		<p>证件类型：
+			<select v-model="arr.select" v-on:change="selectfun">
+			  <option v-for="v in selects" value="{{v}}">{{v}}</option>
+			</select>
+			<input type="text" v-model="arr.selectInformation" placeholder="请输入18位身份证号"  v-on:keyup=" verificationID(arr.selectInformation) ">
+			<span v-show="arr.verifID" v-bind:class="c_red">{{arr.verifID}}</span>
+		</p>
+		<p>爱好：
+			<span v-for="(i,v) in hobbys" > 
+				<input type="checkbox" value="{{v}}" v-model="arr.hobby" id="hob{{i}}" v-bind:disabled="arr.hobby.length * arr.hobby.indexOf(v) == -3"><label for="hob{{i}}">{{v}}</label>  
+			</span>
+			<span v-if="!arr.hobby.length" v-bind:class="c_red">选项不能为空</span>
+			<span v-if="arr.hobby.length >= 3" v-bind:class="c_blue" >最多选三项</span>
+		</p>
+		<p v-show="selectIf">出生日期：<input type="text" v-model="dateof" value ="1998-01-01" id="test1"></p>
+		<a href="javascript:;" class="btn" v-on:click="btnfun" v-show="btn">提交</a>
+	</form>
+</body>
+<script>
+	var myDate = new Date();
+	laydate.render({
+	 	elem: '#test1'
+	 	,theme: '#393D49'
+  		,max: myDate.toLocaleDateString()
+	});
+</script>
+<script type="text/javascript">
+	var vm = new Vue({
+		el : '#formBox',
+		data : {
+			c_red : "c_red",
+			c_blue : "c_blue",
+
+			selects : ["身份证","其他"],
+			selectIf : false,
+
+			hobbys : ['阅读','机械','什顿','阿什'],
+			
+			dateof : '',
+			btn : false,
+
+			arr : {
+				name : "",
+				maw : "男",
+				select : "身份证",
+				selectInformation : '',
+				verifID : "",
+				hobby : [],
+			}
+	
+
+		},
+		methods:{
+			selectfun : function () {
+				vm.arr.select == "身份证" ? vm.selectIf = false : vm.selectIf = true ;
+			},
+			verificationID : function (code) {
+	            var tip = "";
+	            if(!code || !/^\d{6}(18|19|20)?\d{2}(0[1-9]|1[12])(0[1-9]|[12]\d|3[01])\d{3}(\d|X)$/i.test(code)){
+                	tip = "身份证号格式错误";
+	            }
+	            return vm.arr.verifID=tip;
+			},
+			btnfun :function(){
+				console.log('打印数据--------')
+			}
+		},
+		watch : {
+			arr : {
+				handler : function(o,oldO){
+						if(o.name && o.maw && o.select && o.selectInformation && !o.verifID && o.hobby.length>0){
+							this.btn = true;
+							console.log('显示')
+						}else{
+							this.btn = false;
+							console.log('隐藏')
+						}
+				},
+				deep : true,
+				immediate : true
+			}
+		}
+		
+	})
+</script>
+</html>
